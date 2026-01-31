@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image API</title>
+</head>
+<body>
+    <h1>Загрузите изображение</h1>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        <button type="submit">Загрузить</button>
+    </form>
+
+    <h1>Изменить размер изображения</h1>
+    <form action="/resize" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        <input type="number" name="width" placeholder="Ширина" required>
+        <input type="number" name="height" placeholder="Высота" required>
+        <button type="submit">Изменить размер</button>
+    </form>
+
+    <h1>Конвертировать изображение</h1>
+    <form action="/convert" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        <select name="format" required>
+            <option value="jpeg">JPEG</option>
+            <option value="png">PNG</option>
+        </select>
+        <button type="submit">Конвертировать</button>
+    </form>
+
+    <h1>Обрезать изображение</h1>
+    <form action="/crop" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        <input type="number" name="x" placeholder="X" required>
+        <input type="number" name="y" placeholder="Y" required>
+        <input type="number" name="width" placeholder="Ширина" required>
+        <input type="number" name="height" placeholder="Высота" required>
+        <button type="submit">Обрезать</button>
+    </form>
+</body>
+</html>
