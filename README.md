@@ -24,7 +24,7 @@
     Обрезки изображений — результат сохраняется в cropped_images
 Структура проекта
 
-    kyrsovaya/
+    REST API for image processing/
       └── server/
       ├── converted_images/      # Конвертированные изображения
       ├── cropped_images/        # Обрезанные изображения
